@@ -199,7 +199,7 @@ INSERT INTO dbo.AXTopQueryLog([LogDateTime]
 	,[query_plan]
         ,[query_hash]
         ,[query_plan_hash]
-	,[IsApprovedQuery]) 
+	,[IsApprovedQuery]
 OUTPUT INSERTED.Id, INSERTED.query_plan_hash, INSERTED.query_hash INTO @NewInsertedTbl(Id, [query_plan_hash], [query_hash])
 SELECT [LogDateTime]
 	,[DataBase]
